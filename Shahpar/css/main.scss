@@ -2,22 +2,34 @@
     margin: auto;
     padding: 3rem;
 
-  .flex-div {
-    display: flex;
-    margin: 1rem 0;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    .col-4 {
+        margin-top: 1rem;
+    }
+
+    hr {
+        margin-top: 3rem;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+  .flex-div, .col-4  {
+
+
+    // display: flex;
+    // // margin: 1rem 0;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
     
 
     .pCard {
+        margin-top: 1rem;
         flex-basis: 33.333333%;
-        background-color: rgb(223, 222, 217);
-        // margin: 10px;
+        background-color: rgb(179, 146, 179);
 
         img {
-            background-color: rgb(250, 240, 182);
-            // width: 10rem;
-            // height: 10rem;
+            background-color: rgb(179, 189, 212);
         }
     }
   }
