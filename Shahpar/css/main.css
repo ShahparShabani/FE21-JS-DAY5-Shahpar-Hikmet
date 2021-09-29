@@ -17,10 +17,10 @@
 #main-container .flex-div .pCard {
   -ms-flex-preferred-size: 33.333333%;
       flex-basis: 33.333333%;
-  background-color: #cecabd;
+  background-color: #dfded9;
 }
 
 #main-container .flex-div .pCard img {
-  background-color: honeydew;
+  background-color: #faf0b6;
 }
 /*# sourceMappingURL=main.css.map */
