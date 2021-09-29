@@ -1,0 +1,24 @@
+#main-container {
+    margin: auto;
+    padding: 3rem;
+
+  .flex-div {
+    display: flex;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+
+    .pCard {
+        flex-basis: 33.333333%;
+        background-color: rgb(206, 202, 189);
+        // margin: 10px;
+
+        img {
+            background-color: honeydew;
+            // width: 10rem;
+            // height: 10rem;
+        }
+    }
+  }
+}

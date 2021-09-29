@@ -1,1 +1,26 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+#main-container {
+  margin: auto;
+  padding: 3rem;
+}
+
+#main-container .flex-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#main-container .flex-div .pCard {
+  -ms-flex-preferred-size: 33.333333%;
+      flex-basis: 33.333333%;
+  background-color: #cecabd;
+}
+
+#main-container .flex-div .pCard img {
+  background-color: honeydew;
+}
+/*# sourceMappingURL=main.css.map */
