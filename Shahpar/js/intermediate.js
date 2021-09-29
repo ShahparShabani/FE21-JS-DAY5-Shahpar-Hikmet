@@ -14,7 +14,7 @@ class Car {
     }
 
     carInfo() {
-        return`<div class="col-4"><div class="card pCard" style="width: 18rem;">
+        return `<div class="col-4"><div class="card pCard" style="width: 18rem;">
         <img src="${this.img}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${this.brand}</h5>
@@ -30,13 +30,13 @@ class Motorbike extends Car {
     wheels;
 
     constructor(type, brand, model, color, img, wheels) {
-      super(type, brand, model, color, img)
+        super(type, brand, model, color, img)
         this.wheels = wheels;
 
     }
 
     motorbikeInfo() {
-        return`<div class="col-4"> <div class="card pCard" style="width: 18rem;">
+        return `<div class="col-4"> <div class="card pCard" style="width: 18rem;">
         <img src="${this.img}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${this.brand}</h5>
@@ -48,7 +48,7 @@ class Motorbike extends Car {
       </div>`;
     }
 
-} 
+}
 
 class Animal {
     type;
@@ -146,52 +146,29 @@ let pesrsonsWrapper = document.getElementById("persons-wrapper");
 let carsWrapper = document.getElementById("cars-wrapper");
 let animalsWrapper = document.getElementById("animals-wrapper");
 
-function addPerson(fName, lName, gender, img) {
-    pesrsonsWrapper.innerHTML += new Person(fName, lName, gender, img).personInfo();
-}
 
-function addPersonWithJob(fName, lName, gender, img, job) {
-    pesrsonsWrapper.innerHTML += new Profession(fName, lName, gender, img ,job).professionInfo();
-}
-
-function addCar(type, brand, model, color, img) {
-    carsWrapper.innerHTML += new Car(type, brand, model, color, img).carInfo();
-}
-
-function addMotorbike(type, brand, model, color, img, wheels) {
-    carsWrapper.innerHTML += new Motorbike(type, brand, model, color, img, wheels).motorbikeInfo();
-}
-
-function addAnimal(type, name, sound, img) {
-    animalsWrapper.innerHTML += new Animal(type, name, sound, img).animalInfo();
-}
-
-function addFish(type, name, sound, img, waterType) {
-    animalsWrapper.innerHTML += new Fish(type, name, sound, img, waterType).fishInfo();
-}
-
-addPerson("Shahpar", "Shabani", "Female", "../img/pt-f.png");
-addPerson("John", "Doe", "Male", "../img/pt-m.png");
-addPerson("Jane", "Doe", "Female", "../img/pt-f.png");
+pesrsonsWrapper.innerHTML += new Person("Shahpar", "Shabani", "Female", "../img/pt-f.png").personInfo();
+pesrsonsWrapper.innerHTML += new Person("John", "Doe", "Male", "../img/pt-m.png").personInfo();
+pesrsonsWrapper.innerHTML += new Person("Jane", "Doe", "Female", "../img/pt-f.png").personInfo();
 
 
-addPersonWithJob("Shahpar", "Shabani", "Female", "../img/pt-f.png", "Developer");
-addPersonWithJob("John", "Doe", "Male",  "../img/pt-m.png", "Teacher");
-addPersonWithJob("Jane", "Doe", "Female", "../img/pt-f.png", "Doctor");
+pesrsonsWrapper.innerHTML += new Profession("Shahpar", "Shabani", "Female", "../img/pt-f.png", "Developer").professionInfo();
+pesrsonsWrapper.innerHTML += new Profession("John", "Doe", "Male", "../img/pt-m.png", "Teacher").professionInfo();
+pesrsonsWrapper.innerHTML += new Profession("Jane", "Doe", "Female", "../img/pt-f.png", "Doctor").professionInfo();
 
-addCar("Shahpar", "Honda", "Sedan", "Blue", "../img/car-sedan.jpeg");
-addCar("John", " Mercedes-Benz", "Coupe", "Red", "../img/car-11.jpeg");
-addCar("Jane", "Porsche", "Sport", "Red", "../img/car-sport.jpeg");
+carsWrapper.innerHTML += new Car("Shahpar", "Honda", "Sedan", "Blue", "../img/car-sedan.jpeg").carInfo();
+carsWrapper.innerHTML += new Car("John", " Mercedes-Benz", "Coupe", "Red", "../img/car-11.jpeg").carInfo();
+carsWrapper.innerHTML += new Car("Jane", "Porsche", "Sport", "Red", "../img/car-sport.jpeg").carInfo();
 
 
-addMotorbike("Shahpar", "Honda", "Sedan", "Blue", "../img/car-sedan.jpeg", "4");
-addMotorbike("John", " Mercedes-Benz", "Coupe", "Red", "../img/car-11.jpeg", "4");
-addMotorbike("Jane", "Porsche", "Sport", "Red", "../img/car-sport.jpeg", "4");
+carsWrapper.innerHTML += new Motorbike("Shahpar", "Honda", "Sedan", "Blue", "../img/car-sedan.jpeg", "4").motorbikeInfo();
+carsWrapper.innerHTML += new Motorbike("John", " Mercedes-Benz", "Coupe", "Red", "../img/car-11.jpeg", "4").motorbikeInfo();
+carsWrapper.innerHTML += new Motorbike("Jane", "Porsche", "Sport", "Red", "../img/car-sport.jpeg", "4").motorbikeInfo();
 
-addAnimal("Dog", "German", "Bark", "../img/dog-t-2.png");
-addAnimal("Cat", "Persian", "Mio", "../img/cat-1.png");
-addAnimal("Dog", "Pomeranien", "Bark", "../img/dog-1.png");
+animalsWrapper.innerHTML += new Animal("Dog", "German", "Bark", "../img/dog-t-2.png").animalInfo();
+animalsWrapper.innerHTML += new Animal("Cat", "Persian", "Mio", "../img/cat-1.png").animalInfo();
+animalsWrapper.innerHTML += new Animal("Dog", "Pomeranien", "Bark", "../img/dog-1.png").animalInfo();
 
-addFish("Fish", "Goldfish", "", "../img/fish-1.jpeg", "Souer");
-addFish("Fish", "Guppy", "",  "../img/fish-2.jpeg", "Sweet");
-addFish("Fish", "Neon", "", "../img/fish-3.jpeg", "Ocean");
+animalsWrapper.innerHTML += new Fish("Fish", "Goldfish", "", "../img/fish-1.jpeg", "Souer").fishInfo();
+animalsWrapper.innerHTML += new Fish("Fish", "Guppy", "", "../img/fish-2.jpeg", "Sweet").fishInfo();
+animalsWrapper.innerHTML += new Fish("Fish", "Neon", "", "../img/fish-3.jpeg", "Ocean").fishInfo();
